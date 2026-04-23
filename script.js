@@ -1,11 +1,11 @@
 let player1 = "";
 let player2 = "";
 let currentPlayer = "";
-let currentSymbol = "x";
+let symbol = "x";
 let gameOver = false;
 let moves = 0;
 
-const board = ["","","","","","","","",""];
+let board = ["","","","","","","","",""];
 
 const message = document.querySelector(".message");
 const cells = document.querySelectorAll(".cell");
@@ -14,22 +14,25 @@ document.getElementById("submit").onclick = function() {
   player1 = document.getElementById("player-1").value;
   player2 = document.getElementById("player-2").value;
 
+  document.getElementById("form").style.display = "none";
+  document.getElementById("game").style.display = "block";
+
   currentPlayer = player1;
   message.textContent = currentPlayer + ", you're up";
 };
 
 cells.forEach((cell) => {
-  cell.addEventListener("click", function() {
+  cell.onclick = function() {
 
-    const id = parseInt(cell.id) - 1;
+    let index = parseInt(cell.id) - 1;
 
-    if (board[id] !== "" || gameOver) return;
+    if (board[index] !== "" || gameOver) return;
 
-    board[id] = currentSymbol;
-    cell.textContent = currentSymbol;
+    board[index] = symbol;
+    cell.textContent = symbol;
     moves++;
 
-    if (checkWinner()) {
+    if (checkWin()) {
       message.textContent = currentPlayer + " congratulations you won!";
       gameOver = true;
       return;
@@ -41,20 +44,20 @@ cells.forEach((cell) => {
       return;
     }
 
-    if (currentSymbol === "x") {
-      currentSymbol = "o";
+    if (symbol === "x") {
+      symbol = "o";
       currentPlayer = player2;
     } else {
-      currentSymbol = "x";
+      symbol = "x";
       currentPlayer = player1;
     }
 
     message.textContent = currentPlayer + ", you're up";
-  });
+  };
 });
 
-function checkWinner() {
-  const win = [
+function checkWin() {
+  let win = [
     [0,1,2],[3,4,5],[6,7,8],
     [0,3,6],[1,4,7],[2,5,8],
     [0,4,8],[2,4,6]

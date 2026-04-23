@@ -1,20 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   text-align: center;
 }
 
 .container {
   margin-top: 50px;
-}
-
-input {
-  padding: 8px;
-  margin: 5px;
-}
-
-button {
-  padding: 8px 16px;
-  cursor: pointer;
 }
 
 .board {
@@ -31,13 +21,12 @@ button {
   border: 1px solid black;
   font-size: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
 .message {
   margin-top: 20px;
-  font-size: 18px;
   font-weight: bold;
 }
