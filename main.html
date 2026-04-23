@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<div class="container">
-    
-    <div id="playerForm">
-      <input type="text" id="player-1" placeholder="Enter Player 1 Name">
-      <input type="text" id="player-2" placeholder="Enter Player 2 Name">
-      <button id="submit">Submit</button>
-    </div>
+  <div class="container">
 
-    <div id="game" style="display:none;">
-      <h1>Tic Tac Toe</h1>
-      <div class="message"></div>
+    <input id="player-1" placeholder="Player 1">
+    <input id="player-2" placeholder="Player 2">
+    <button id="submit">Submit</button>
 
-      <div class="board" id="board">
-        <div class="cell" id="1"></div>
-        <div class="cell" id="2"></div>
-        <div class="cell" id="3"></div>
-        <div class="cell" id="4"></div>
-        <div class="cell" id="5"></div>
-        <div class="cell" id="6"></div>
-        <div class="cell" id="7"></div>
-        <div class="cell" id="8"></div>
-        <div class="cell" id="9"></div>
-      </div>
+    <h1>Tic Tac Toe</h1>
+    <div class="message"></div>
+
+    <div class="board">
+      <div class="cell" id="1"></div>
+      <div class="cell" id="2"></div>
+      <div class="cell" id="3"></div>
+      <div class="cell" id="4"></div>
+      <div class="cell" id="5"></div>
+      <div class="cell" id="6"></div>
+      <div class="cell" id="7"></div>
+      <div class="cell" id="8"></div>
+      <div class="cell" id="9"></div>
     </div>
 
   </div>
 
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
