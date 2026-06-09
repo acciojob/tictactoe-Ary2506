@@ -1,48 +1,43 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.container {
     text-align: center;
 }
 
-#player-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 250px;
+.container {
+    margin-top: 20px;
 }
 
 input {
-    padding: 8px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
 }
 
 button {
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
 .message {
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 20px;
     font-weight: bold;
 }
 
 .board {
+    width: 306px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    margin: auto;
 }
 
 .cell {
     border: 1px solid black;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
     cursor: pointer;
 }
